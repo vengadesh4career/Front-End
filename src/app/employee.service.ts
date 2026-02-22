@@ -8,25 +8,10 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class EmployeeService {
-httpData: any;
- private apiUrl = "http://54.224.46.64:8080/emp-service/employees";
- constructor( private http: HttpClient) {   }
-
-
- // getEmployees (){
-//    return this.http.get<[]>(this.apiUrl);
-
-//this.http.get<any>(this.apiUrl).subscribe(data => {
-  //    this.httpData = data;
-  // ;
-
-    
-  //  });
-
-  //  return this.httpData;
-  //}
-
-getEmployees(): Observable<any> {
+  httpData: any;
+  private apiUrl = "http://54.224.46.64:8080/emp-service/employees";
+  constructor(private http: HttpClient) { }
+  getEmployees(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
 
